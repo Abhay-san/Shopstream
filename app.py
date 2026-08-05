@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load Model and Scaler
-model = joblib.load("best_model.pkl")
+model = joblib.load("high_value_order_xgb_pipeline_final (1).pkl")
 scaler = joblib.load("scaler.pkl")
 
 # ----------------------------
