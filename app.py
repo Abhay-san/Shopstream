@@ -245,9 +245,26 @@ with tab_customers:
 with tab_geo:
     st.subheader("Revenue by Country")
     country_rev = filtered.groupby("Country")["Order_Amount"].sum().reset_index()
-    fig_map = px.choropleth(country_rev, locations="Country", locationmode="country name",
+
+    # Plotly's choropleth is most reliable with ISO-3 country codes.
+    COUNTRY_ISO3 = {
+        "Germany": "DEU",
+        "France": "FRA",
+        "India": "IND",
+        "United States": "USA",
+        "Australia": "AUS",
+        "Canada": "CAN",
+        "Saudi Arabia": "SAU",
+        "United Kingdom": "GBR",
+        "Pakistan": "PAK",
+        "UAE": "ARE",
+    }
+    country_rev["ISO3"] = country_rev["Country"].map(COUNTRY_ISO3)
+
+    fig_map = px.choropleth(country_rev, locations="ISO3", locationmode="ISO-3",
                              color="Order_Amount", title="Revenue by Country",
-                             color_continuous_scale="Viridis")
+                             color_continuous_scale="Viridis",
+                             hover_name="Country")
     st.plotly_chart(fig_map, use_container_width=True)
 
     c1, c2 = st.columns(2)
