@@ -122,7 +122,7 @@ tab_overview, tab_products, tab_customers, tab_geo, tab_ops, tab_data = st.tabs(
 with tab_overview:
     st.subheader("Revenue & Orders Over Time")
     granularity = st.radio("Aggregate by", ["Day", "Week", "Month"], horizontal=True, index=2)
-    freq_map = {"Day": "D", "Week": "W", "Month": "M"}
+    freq_map = {"Day": "D", "Week": "W", "Month": "ME"}
     ts = (
         filtered.set_index("Order_Date")
         .resample(freq_map[granularity])
