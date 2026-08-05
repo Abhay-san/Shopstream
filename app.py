@@ -20,14 +20,12 @@ st.write("Predict whether an order is a High Value Order.")
 # Sidebar
 # ----------------------------
 
-st.sidebar.title("📌 About")
-
 st.sidebar.markdown("""
-### Project Information
+### 📌 Project Information
 
 **Project:** E-Commerce High Value Order Prediction
 
-**Model:** Random Forest / Gradient Boosting *(Automatically Selected)*
+**Model:** XGBoost Classifier
 
 **Dataset:** E-Commerce Orders Dataset
 
@@ -37,7 +35,6 @@ st.sidebar.markdown("""
 
 **Developed by:** Abhay Mahajan
 """)
-
 # ----------------------------
 # User Inputs
 # ----------------------------
