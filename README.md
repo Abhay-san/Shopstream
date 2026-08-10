@@ -14,9 +14,8 @@ A data engineering pipeline for e-commerce order data — EDA in Hive, ML model 
 | Shrutika Gaikwad | [@Shrutika12345](https://github.com/Shrutika12345) |
 | Sravan Branwal | [@sravan-kb](https://github.com/sravan-kb) |
 
-This CSV file will required to open Streamlit appp
-
-ecommerce_orders_dataset.csv ( One Should upload this in streamlit to see DashBoard)
+ecommerce_orders_dataset.csv 
+This CSV file will required to open Streamlit app ( One Should upload this in streamlit to see DashBoard)
 
 streamlit Link :-
 https://shopstream-idprvyfk2pyxhu4xpnkxet.streamlit.app/
